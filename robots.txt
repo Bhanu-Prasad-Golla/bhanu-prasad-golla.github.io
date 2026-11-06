@@ -1,0 +1,6 @@
+# Bhanu Prasad Golla — portfolio
+User-agent: *
+Allow: /
+
+# Update this to your real domain after deploying.
+Sitemap: https://bhanuprasadgolla.de/sitemap.xml

@@ -1,0 +1,13 @@
+{
+  "name": "Bhanu Prasad Golla — Embedded Systems Engineer",
+  "short_name": "B. P. Golla",
+  "description": "Portfolio of Bhanu Prasad Golla, embedded systems and automotive software engineer in Bremen, Germany.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf9f6",
+  "theme_color": "#faf9f6",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
