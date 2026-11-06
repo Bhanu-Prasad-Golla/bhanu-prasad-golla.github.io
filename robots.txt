@@ -2,5 +2,4 @@
 User-agent: *
 Allow: /
 
-# Update this to your real domain after deploying.
-Sitemap: https://bhanuprasadgolla.de/sitemap.xml
+Sitemap: https://bhanu-prasad-golla.github.io/sitemap.xml

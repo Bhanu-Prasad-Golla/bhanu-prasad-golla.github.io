@@ -24,20 +24,21 @@ or `photoOffice` path in `content.js`.
 
 To replace the downloadable CV, overwrite `Bhanu_Prasad_Golla_CV.pdf`.
 
-## Before you go live — one thing to change
+## Live at
 
-Four files contain a placeholder domain, `https://bhanuprasadgolla.de/`.
-Replace it with your real URL:
+<https://bhanu-prasad-golla.github.io/>
 
-| File             | What to change                                  |
-|------------------|-------------------------------------------------|
-| `index.html`     | `<link rel="canonical">`, the `og:` and `twitter:` URLs |
-| `sitemap.xml`    | the `<loc>` value                                |
-| `robots.txt`     | the `Sitemap:` line                              |
+All absolute URLs (canonical, Open Graph, sitemap, robots) already point here.
+If you later move to a custom domain, search and replace
+`bhanu-prasad-golla.github.io` across `index.html`, `sitemap.xml` and
+`robots.txt`.
 
-Search and replace `bhanuprasadgolla.de` across the project and you're done.
-If you skip this, the site still works — only link previews and search
-indexing are affected.
+## The link-preview image
+
+`assets/og-image.jpg` (1200x627) is what LinkedIn, Slack and WhatsApp show
+when the link is shared. It is a rendered card, not a photo crop. To change
+what it says, edit the text in it and re-render — ask Claude, or rebuild it
+from the same HTML/CSS used for the site.
 
 ## Deploying (all free)
 

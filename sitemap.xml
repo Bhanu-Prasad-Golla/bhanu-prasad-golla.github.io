@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Update the domain to your real one after deploying. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bhanuprasadgolla.de/</loc>
+    <loc>https://bhanu-prasad-golla.github.io/</loc>
     <lastmod>2026-11-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
