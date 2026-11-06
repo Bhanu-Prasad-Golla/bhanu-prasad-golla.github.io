@@ -140,60 +140,7 @@ a{color:inherit;text-decoration:none}
   :root{--ink-3:#5a5e66;--rule:#c8c4ba}
 }
 
-/* ---------- print: Ctrl+P produces a clean, compact CV ---------- */
-@media print{
-  @page{margin:12mm 11mm}
-  html,body{background:#fff !important;color:#000;font-size:9.8pt;line-height:1.42}
-  /* use the full page width: the screen gutters and max-width waste a third of it */
-  .wrap{max-width:none !important;padding-inline:0 !important;width:100% !important}
-  nav,.burger,.nlinks,.hcta,.rule,.mq,.skip,.modal,.go,.cvbar,.avail,.scrollcue{display:none !important}
 
-  /* hero: compact two-column band instead of a full screen */
-  header{padding:0 0 10pt !important;min-height:0 !important}
-  .hgrid{grid-template-columns:1fr 104px !important;gap:16pt !important;align-items:start !important}
-  h1{font-size:23pt !important;margin-bottom:6pt;letter-spacing:-.03em}
-  h1 .ln i{transform:none !important;animation:none !important}
-  .role-line{font-size:10.5pt;margin-bottom:5pt;max-width:none}
-  .loc{margin-bottom:0;font-size:8.6pt}
-  .hphoto{width:104px !important;order:0 !important}
-  .hphoto .f{filter:none !important;box-shadow:none !important;border:1px solid #ccc}
-  .hphoto img{aspect-ratio:3/3.4}
-  .hphoto .tick{display:none}
-
-  /* sections: tighter, never split a record across pages */
-  section{padding:11pt 0 !important}
-  .shead{grid-template-columns:96px 1fr !important;gap:12pt !important;margin-bottom:11pt !important}
-  .about,.skrow,.job,.edu,.jrow{grid-template-columns:96px 1fr !important;gap:12pt !important}
-  h2{font-size:14pt !important;letter-spacing:-.02em}
-  .snum{font-size:8pt;padding-top:3pt}
-  .ssub{font-size:9.4pt;color:#333}
-  .about-body p.lead{font-size:11.5pt;margin-bottom:9pt}
-  .about-body p,.jnote,.job li{color:#222}
-  .facts{grid-template-columns:repeat(4,1fr) !important;margin-top:12pt}
-  .fact{padding:9pt 8pt}
-  .fact .v{font-size:15pt}
-  .job,.jrow,.edu,.skrow,.fact,.prow{break-inside:avoid;page-break-inside:avoid}
-  .job,.jrow{padding:12pt 0}
-  .job li,.jnote{font-size:9.4pt}
-  h2,h3,.shead{break-after:avoid;page-break-after:avoid}
-
-  /* projects: list them, drop the interactive affordances */
-  .prow{grid-template-columns:96px 1fr !important;padding:9pt 0;background:none !important}
-  .prow::before{display:none !important}
-  .prow p{font-size:9.4pt;color:#333}
-  .pill,.jtags span,.prow .st span{border:1px solid #bbb;background:#fff;color:#222}
-
-  /* contact: show real addresses, since a printed link is useless */
-  #contact{padding-bottom:0}
-  .cbig{font-size:17pt !important;margin-bottom:8pt}
-  .cmail{font-size:12pt;margin:8pt 0 10pt;border-bottom:1px solid #999}
-  a{color:#000;text-decoration:none}
-  .clist a::after{content:" — " attr(href);font-size:8pt;color:#555;word-break:break-all}
-  .clist a[href^="#"]::after{content:""}
-  .clist a[href^="mailto:"]::after,.clist a[href^="tel:"]::after{content:""}
-  footer{border-top:1px solid #ccc;padding:7pt 0 0;font-size:8pt;color:#444}
-  [data-reveal]{opacity:1 !important;transform:none !important}
-}
 
 /* ---------- nav ---------- */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.4s cubic-bezier(.19,1,.22,1)}
@@ -416,6 +363,61 @@ footer{border-top:1px solid var(--rule);padding:26px 0;font-family:var(--mono);f
   header{padding:128px 0 68px}
   section{padding:68px 0}
   .mbox{padding:30px 22px}
+}
+
+/* ---------- print: Ctrl+P produces a clean, compact CV ---------- */
+@media print{
+  @page{margin:12mm 11mm}
+  html,body{background:#fff !important;color:#000;font-size:9.8pt;line-height:1.42}
+  /* use the full page width: the screen gutters and max-width waste a third of it */
+  .wrap{max-width:none !important;padding-inline:0 !important;width:100% !important}
+  nav,.burger,.nlinks,.hcta,.rule,.mq,.skip,.modal,.go,.cvbar,.avail,.scrollcue{display:none !important}
+
+  /* hero: compact two-column band instead of a full screen */
+  header{padding:0 0 10pt !important;min-height:0 !important}
+  .hgrid{grid-template-columns:1fr 104px !important;gap:16pt !important;align-items:start !important}
+  h1{font-size:23pt !important;margin-bottom:6pt;letter-spacing:-.03em}
+  h1 .ln i{transform:none !important;animation:none !important}
+  .role-line{font-size:10.5pt;margin-bottom:5pt;max-width:none}
+  .loc{margin-bottom:0;font-size:8.6pt}
+  .hphoto{width:104px !important;order:0 !important}
+  .hphoto .f{filter:none !important;box-shadow:none !important;border:1px solid #ccc}
+  .hphoto img{aspect-ratio:3/3.4}
+  .hphoto .tick{display:none}
+
+  /* sections: tighter, never split a record across pages */
+  section{padding:11pt 0 !important}
+  .shead{grid-template-columns:96px 1fr !important;gap:12pt !important;margin-bottom:11pt !important}
+  .about,.skrow,.job,.edu,.jrow{grid-template-columns:96px 1fr !important;gap:12pt !important}
+  h2{font-size:14pt !important;letter-spacing:-.02em}
+  .snum{font-size:8pt;padding-top:3pt}
+  .ssub{font-size:9.4pt;color:#333}
+  .about-body p.lead{font-size:11.5pt;margin-bottom:9pt}
+  .about-body p,.jnote,.job li{color:#222}
+  .facts{grid-template-columns:repeat(4,1fr) !important;margin-top:12pt}
+  .fact{padding:9pt 8pt}
+  .fact .v{font-size:15pt}
+  .job,.jrow,.edu,.skrow,.fact,.prow{break-inside:avoid;page-break-inside:avoid}
+  .job,.jrow{padding:12pt 0}
+  .job li,.jnote{font-size:9.4pt}
+  h2,h3,.shead{break-after:avoid;page-break-after:avoid}
+
+  /* projects: list them, drop the interactive affordances */
+  .prow{grid-template-columns:96px 1fr !important;padding:9pt 0;background:none !important}
+  .prow::before{display:none !important}
+  .prow p{font-size:9.4pt;color:#333}
+  .pill,.jtags span,.prow .st span{border:1px solid #bbb;background:#fff;color:#222}
+
+  /* contact: show real addresses, since a printed link is useless */
+  #contact{padding-bottom:0}
+  .cbig{font-size:17pt !important;margin-bottom:8pt}
+  .cmail{font-size:12pt;margin:8pt 0 10pt;border-bottom:1px solid #999}
+  a{color:#000;text-decoration:none}
+  .clist a::after{content:" — " attr(href);font-size:8pt;color:#555;word-break:break-all}
+  .clist a[href^="#"]::after{content:""}
+  .clist a[href^="mailto:"]::after,.clist a[href^="tel:"]::after{content:""}
+  footer{border-top:1px solid #ccc;padding:7pt 0 0;font-size:8pt;color:#444}
+  [data-reveal]{opacity:1 !important;transform:none !important}
 }
 </style>
 </head>
